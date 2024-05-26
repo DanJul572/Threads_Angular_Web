@@ -1,0 +1,9 @@
+<section>
+  <app-comment-form (formSubmited)="createComment($event)"></app-comment-form>
+</section>
+<section>
+  <app-comment
+    [comment]="comment"
+    *ngFor="let comment of comments() trackBy: commentTrack"
+  ></app-comment>
+</section>
